@@ -5,6 +5,8 @@
 <title>Rakesh Kumar Rai | Academic Website</title>
 <meta charset="UTF-8">
 
+<script src="https://unpkg.com/scholar-citation-widget/scholar.js"></script>
+
 <style>
 
 body{
@@ -213,29 +215,45 @@ His work explores sleep stage classification, Alzheimer’s disease detection, a
 </ul>
 
 
-<h2 id="publications">Selected Publications</h2>
+<h2 id="publications">Publications</h2>
 
-<ul>
+<p>
+The following publications are automatically fetched from my 
+<a href="https://scholar.google.com/citations?user=Lh0NvWgAAAAJ" target="_blank">
+Google Scholar profile
+</a>.
+</p>
 
+<div id="scholar-publications"></div>
+
+<script>
+
+fetch("https://api.scholar-citations.com/?user=Lh0NvWgAAAAJ")
+.then(response => response.json())
+.then(data => {
+
+let html = "<ul>";
+
+data.publications.slice(0,10).forEach(paper => {
+
+html += `
 <li>
+<b>${paper.title}</b><br>
+${paper.authors}<br>
+<i>${paper.venue}</i>, ${paper.year}<br>
+Citations: ${paper.citations}
+</li><br>
+`;
 
-<b>R. K. Rai</b>, et al.  
-<i>EEG-based Sleep Stage Classification using Hybrid Transformer-GRU Model</i>.  
-IEEE Transactions (Under Review).
+});
 
-</li>
+html += "</ul>";
 
-<br>
+document.getElementById("scholar-publications").innerHTML = html;
 
-<li>
+});
 
-<b>R. K. Rai</b>, et al.  
-<i>Voice-Based Detection of Parkinson’s Disease using Supervised Machine Learning</i>.  
-IEEE Conference.
-
-</li>
-
-</ul>
+</script>
 
 
 <h2 id="education">Education</h2>
