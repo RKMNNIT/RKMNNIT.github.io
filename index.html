@@ -5,8 +5,6 @@
 <title>Rakesh Kumar Rai | Academic Website</title>
 <meta charset="UTF-8">
 
-<script src="https://cdn.jsdelivr.net/gh/academicpages/academicpages.github.io/assets/js/scholar.js"></script>
-
 <style>
 
 body{
@@ -92,10 +90,16 @@ color:#003366;
 background:#e6eefc;
 }
 
-/* LIST */
+/* PUBLICATIONS */
 
-ul{
-padding-left:20px;
+.paper{
+margin-bottom:20px;
+padding-bottom:10px;
+border-bottom:1px solid #eee;
+}
+
+.paper-title{
+font-weight:600;
 }
 
 /* NEWS */
@@ -180,11 +184,11 @@ Motilal Nehru National Institute of Technology (MNNIT), Allahabad
 <h2 id="about">About Me</h2>
 
 <p>
-Rakesh Kumar Rai is an Assistant Professor in the School of Computer Engineering at KIIT University, Bhubaneswar, and a PhD Scholar in Computer Science at MNNIT Allahabad. His research focuses on EEG signal analysis and computational neuroscience, particularly the development of deep learning frameworks for cognitive state detection and neurological disorder analysis.
+Rakesh Kumar Rai is an Assistant Professor in the School of Computer Engineering at KIIT University, Bhubaneswar, and a PhD Scholar in Computer Science at MNNIT Allahabad.
 </p>
 
 <p>
-His work explores sleep stage classification, Alzheimer’s disease detection, and brain–computer interfaces using advanced deep learning architectures, physics-informed learning, and explainable AI techniques.
+His research focuses on EEG signal analysis and computational neuroscience, particularly the development of deep learning frameworks for cognitive state detection and neurological disorder analysis.
 </p>
 
 
@@ -215,51 +219,54 @@ His work explores sleep stage classification, Alzheimer’s disease detection, a
 </ul>
 
 
-<h2 id="publications">Publications</h2>
+<h2 id="publications">Selected Publications</h2>
 
 <p>
-Full publication list available on 
-<a href="https://scholar.google.com/citations?user=Lh0NvWgAAAAJ" target="_blank">
-Google Scholar
-</a>.
+For the complete publication list, please visit my 
+<a href="https://scholar.google.com/citations?user=Lh0NvWgAAAAJ&hl=en">Google Scholar profile</a>.
 </p>
 
-<ul id="scholar-list"></ul>
 
-<script>
+<div class="paper">
 
-var scholarID = "Lh0NvWgAAAAJ";
+<div class="paper-title">
+Voice-Based Detection of Parkinson’s Disease Using Supervised Machine Learning Models
+</div>
 
-fetch("https://scholar.googleusercontent.com/citations?user=" + scholarID + "&hl=en")
-.then(res => res.text())
-.then(data => {
+R. K. Rai, Rishabh Raj, Ankita Hati<br>
 
-let parser = new DOMParser();
-let doc = parser.parseFromString(data, "text/html");
+IEEE Conference Publication<br>
 
-let papers = doc.querySelectorAll(".gsc_a_tr");
+<a href="#">PDF</a>
 
-let html = "";
+</div>
 
-papers.forEach((paper, i) => {
 
-if(i < 10){
+<div class="paper">
 
-let title = paper.querySelector(".gsc_a_at").innerText;
-let authors = paper.querySelector(".gsc_a_at + div").innerText;
-let year = paper.querySelector(".gsc_a_y span").innerText;
+<div class="paper-title">
+SleepXNet: Hybrid Transformer-GRU Model for EEG-Based Sleep Stage Classification
+</div>
 
-html += `<li><b>${title}</b><br>${authors}<br>Year: ${year}</li><br>`;
+R. K. Rai et al.<br>
 
-}
+IEEE Transactions (Under Review)
 
-});
+</div>
 
-document.getElementById("scholar-list").innerHTML = html;
 
-});
+<div class="paper">
 
-</script>
+<div class="paper-title">
+PINN-Guided SAG-Net: Interpretable EEG Classification via Physics-Constrained Learning
+</div>
+
+R. K. Rai et al.<br>
+
+IEEE Transactions (Under Review)
+
+</div>
+
 
 <h2 id="education">Education</h2>
 
