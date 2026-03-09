@@ -5,7 +5,7 @@
 <title>Rakesh Kumar Rai | Academic Website</title>
 <meta charset="UTF-8">
 
-<script src="https://unpkg.com/scholar-citation-widget/scholar.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/academicpages/academicpages.github.io/assets/js/scholar.js"></script>
 
 <style>
 
@@ -218,43 +218,48 @@ His work explores sleep stage classification, Alzheimer’s disease detection, a
 <h2 id="publications">Publications</h2>
 
 <p>
-The following publications are automatically fetched from my 
+Full publication list available on 
 <a href="https://scholar.google.com/citations?user=Lh0NvWgAAAAJ" target="_blank">
-Google Scholar profile
+Google Scholar
 </a>.
 </p>
 
-<div id="scholar-publications"></div>
+<ul id="scholar-list"></ul>
 
 <script>
 
-fetch("https://api.scholar-citations.com/?user=Lh0NvWgAAAAJ")
-.then(response => response.json())
+var scholarID = "Lh0NvWgAAAAJ";
+
+fetch("https://scholar.googleusercontent.com/citations?user=" + scholarID + "&hl=en")
+.then(res => res.text())
 .then(data => {
 
-let html = "<ul>";
+let parser = new DOMParser();
+let doc = parser.parseFromString(data, "text/html");
 
-data.publications.slice(0,10).forEach(paper => {
+let papers = doc.querySelectorAll(".gsc_a_tr");
 
-html += `
-<li>
-<b>${paper.title}</b><br>
-${paper.authors}<br>
-<i>${paper.venue}</i>, ${paper.year}<br>
-Citations: ${paper.citations}
-</li><br>
-`;
+let html = "";
+
+papers.forEach((paper, i) => {
+
+if(i < 10){
+
+let title = paper.querySelector(".gsc_a_at").innerText;
+let authors = paper.querySelector(".gsc_a_at + div").innerText;
+let year = paper.querySelector(".gsc_a_y span").innerText;
+
+html += `<li><b>${title}</b><br>${authors}<br>Year: ${year}</li><br>`;
+
+}
 
 });
 
-html += "</ul>";
-
-document.getElementById("scholar-publications").innerHTML = html;
+document.getElementById("scholar-list").innerHTML = html;
 
 });
 
 </script>
-
 
 <h2 id="education">Education</h2>
 
