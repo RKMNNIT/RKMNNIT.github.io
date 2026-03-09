@@ -1,150 +1,209 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Mr. Rakesh Kumar Rai | Academic Profile</title>
-    <meta charset="UTF-8">
+<title>Rakesh Kumar Rai | Academic Website</title>
+<meta charset="UTF-8">
 
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 60px auto;
-            max-width: 1000px;
-            line-height: 1.8;
-            color: #333;
-        }
+<style>
 
-        h1 {
-            color: #002147;
-            margin-bottom: 5px;
-        }
+body{
+font-family: "Segoe UI", Arial;
+max-width:1000px;
+margin:auto;
+line-height:1.7;
+color:#333;
+padding:30px;
+}
 
-        h2 {
-            color: #003366;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 8px;
-            margin-top: 60px;
-        }
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
+}
 
-        a {
-            color: #00509E;
-            text-decoration: none;
-        }
+.profile{
+display:flex;
+gap:30px;
+align-items:center;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+.profile img{
+width:180px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
 
-        .section {
-            margin-top: 40px;
-        }
+h1{
+margin-bottom:5px;
+color:#002147;
+}
 
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-        }
+h2{
+margin-top:50px;
+border-bottom:2px solid #eee;
+padding-bottom:6px;
+color:#003366;
+}
 
-        .profile-img {
-            width: 190px;
-            border-radius: 12px;
-            box-shadow: 0px 6px 18px rgba(0,0,0,0.1);
-        }
+nav{
+margin-top:15px;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+nav a{
+margin-right:20px;
+text-decoration:none;
+color:#00509E;
+font-weight:500;
+}
 
-        .email {
-            margin-bottom: 5px;
-        }
+nav a:hover{
+text-decoration:underline;
+}
 
-        .highlight {
-            font-weight: 500;
-        }
-    </style>
+ul{
+padding-left:20px;
+}
+
+.footer{
+margin-top:80px;
+font-size:14px;
+color:#777;
+text-align:center;
+border-top:1px solid #eee;
+padding-top:20px;
+}
+
+.highlight{
+font-weight:500;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div class="header-container">
-    <div>
-        <h1>Mr. Rakesh Kumar Rai</h1>
-        <p class="highlight">Assistant Professor, School of Computer Engineering</p>
-        <p>KIIT University, Bhubaneswar</p>
-        <p class="highlight">PhD Scholar, Computer Science</p>
-        <p>Motilal Nehru National Institute of Technology (MNNIT), Allahabad</p>
-    </div>
+<header>
 
-    <div>
-        <img src="profile.jpeg" class="profile-img">
-    </div>
-</div>
+<div>
+<h1>Rakesh Kumar Rai</h1>
 
-
-<div class="section">
-<h2>About Me</h2>
-<p>
-Rakesh Kumar Rai is a dedicated researcher, educator, and data enthusiast with a strong background in computational intelligence, analytics, and neuroscience-inspired artificial intelligence. 
-He completed his B.Tech in Computer Science and Engineering from NIT Nagaland and worked as a Data Analyst at IGL for three years, where he gained industry experience in large-scale data analysis and insight generation.
+<p class="highlight">
+Assistant Professor, School of Computer Engineering<br>
+KIIT University, Bhubaneswar
 </p>
 
 <p>
-He is currently serving as an Assistant Professor in the School of Computer Engineering at KIIT University, Bhubaneswar, while pursuing his PhD in Computer Science at MNNIT Allahabad. 
-His research focuses on human cognitive behavior analysis and brain state modeling using EEG signals, exploring how physiological and affective conditions influence neural dynamics through advanced deep learning frameworks.
+PhD Scholar – Computer Science<br>
+Motilal Nehru National Institute of Technology (MNNIT), Allahabad
 </p>
+
+<nav>
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#publications">Publications</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</nav>
+
 </div>
 
+<img src="profile.jpeg">
 
-<div class="section">
-<h2>Research Interests</h2>
+</header>
+
+
+<h2 id="about">About Me</h2>
+
+<p>
+Rakesh Kumar Rai is an Assistant Professor in the School of Computer Engineering at KIIT University, Bhubaneswar, and a PhD Scholar in Computer Science at Motilal Nehru National Institute of Technology (MNNIT), Allahabad.
+</p>
+
+<p>
+His research focuses on EEG signal analysis and computational neuroscience, particularly the development of deep learning frameworks for cognitive state detection and neurological disorder analysis. His work explores sleep stage classification, Alzheimer’s disease detection, and brain–computer interfaces using advanced deep learning and explainable AI techniques.
+</p>
+
+
+<h2 id="research">Research Interests</h2>
+
 <ul>
-<li>EEG Signal Processing and Brain State Analysis</li>
-<li>Sleep Stage Classification using Deep Learning</li>
-<li>Alzheimer’s Disease Detection</li>
+
+<li>EEG Signal Processing</li>
+<li>Sleep Stage Classification</li>
 <li>Brain–Computer Interface (BCI)</li>
+<li>Alzheimer’s Disease Detection</li>
 <li>Physics-Informed Deep Learning</li>
-<li>Explainable AI for Healthcare Applications</li>
+<li>Explainable AI for Healthcare</li>
+
 </ul>
-</div>
 
 
-<div class="section">
-<h2>Education</h2>
+<h2 id="publications">Selected Publications</h2>
+
 <ul>
-<li><strong>PhD in Computer Science</strong> – MNNIT Allahabad (2022–2026)</li>
-<li><strong>M.Tech in CSE</strong> – Maharshi Dayanand University (2019–2021) – 8.46 CGPA (Distinction)</li>
-<li><strong>B.Tech in CSE</strong> – NIT Nagaland (2012–2016)</li>
+
+<li>
+R. K. Rai et al.  
+<i>EEG-based Sleep Stage Classification using Hybrid Transformer-GRU Model</i>.  
+IEEE Transactions (Under Review).
+</li>
+
+<li>
+R. K. Rai et al.  
+<i>Voice-Based Detection of Parkinson’s Disease using Machine Learning</i>.  
+IEEE Conference Publication.
+</li>
+
 </ul>
-</div>
 
 
-<div class="section">
-<h2>Achievements & Highlights</h2>
+<h2 id="education">Education</h2>
+
 <ul>
-<li>PhD Scholar – MNNIT Allahabad</li>
-<li>Selected for PhD in Computer Science at IIT Dhanbad (2022)</li>
-<li>GATE Qualified</li>
-<li>AIR 25,083 in AIEEE 2012 (Top ~2% nationally)</li>
-<li>Programming Proficiency: C, C++, Python</li>
+
+<li><b>PhD – Computer Science</b><br>
+MNNIT Allahabad (2022–Present)
+</li>
+
+<li><b>M.Tech – Computer Science</b><br>
+Maharshi Dayanand University (2019–2021)
+</li>
+
+<li><b>B.Tech – Computer Science</b><br>
+NIT Nagaland (2012–2016)
+</li>
+
 </ul>
-</div>
 
 
-<div class="section">
-<h2>Professional Links</h2>
-<ul>
-<li><a href="https://scholar.google.com/citations?user=Lh0NvWgAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
-<li><a href="https://github.com/RKMNNIT" target="_blank">GitHub</a></li>
-<li><a href="https://www.linkedin.com/in/rakesh-rai-4241b9194/" target="_blank">LinkedIn</a></li>
-</ul>
-</div>
+<h2 id="contact">Contact</h2>
+
+<p>
+Personal Email:  
+<a href="mailto:rakeshnitn25@gmail.com">rakeshnitn25@gmail.com</a>
+</p>
+
+<p>
+Official Email:  
+<a href="mailto:rakesh.raifcs@kiit.ac.in">rakesh.raifcs@kiit.ac.in</a>
+</p>
+
+<p>
+
+<a href="https://scholar.google.com/citations?user=Lh0NvWgAAAAJ&hl=en">Google Scholar</a> |
+<a href="https://github.com/RKMNNIT">GitHub</a> |
+<a href="https://www.linkedin.com/in/rakesh-rai-4241b9194/">LinkedIn</a>
+
+</p>
 
 
-<div class="section">
-<h2>Contact</h2>
-<p class="email">Personal Email: rakeshnitn25@gmail.com</p>
-<p class="email">Official Email: rakesh.raifcs@kiit.ac.in</p>
+<div class="footer">
+
+© 2026 Rakesh Kumar Rai  
+Academic Website
+
 </div>
 
 </body>
