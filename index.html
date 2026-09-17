@@ -1,614 +1,470 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b33">
+  <meta name="color-scheme" content="light dark">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rakesh Kumar Rai | Computational Neuroscience &amp; AI</title>
 
-<title>Rakesh Kumar Rai | Academic Website</title>
+  <meta name="description"
+        content="Rakesh Kumar Rai is a computer science researcher working across computational neuroscience, EEG signal processing, and trustworthy AI for healthcare.">
 
-<style>
+  <meta property="og:type" content="profile">
+  <meta property="og:title"
+        content="Rakesh Kumar Rai — Computational Neuroscience &amp; AI">
+  <meta property="og:description"
+        content="Research in EEG intelligence, computational neuroscience, and trustworthy AI for healthcare.">
 
-/* =========================
-   GENERAL PAGE STYLE
-========================= */
+  <link rel="canonical" href="https://rkmnnit.github.io/">
 
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    max-width: 1100px;
-    margin: auto;
-    line-height: 1.7;
-    color: #333;
-    padding: 30px;
-}
+  <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23071b33'/%3E%3Cpath d='M12 34h9l4-12 7 25 6-18 4 5h10' fill='none' stroke='%23ed4c45' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    margin-bottom: 40px;
-}
-
-.header-text {
-    max-width: 650px;
-}
-
-header img {
-    width: 180px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-}
-
-
-/* =========================
-   TEXT
-========================= */
-
-h1 {
-    margin-bottom: 5px;
-    color: #002147;
-    font-size: 34px;
-}
-
-h2 {
-    margin-top: 50px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 6px;
-    color: #003366;
-}
-
-.highlight {
-    font-weight: 500;
-}
-
-
-/* =========================
-   NAVIGATION
-========================= */
-
-nav {
-    margin-top: 15px;
-}
-
-nav a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #00509E;
-    font-weight: 500;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-
-/* =========================
-   PROFILE LINKS
-========================= */
-
-.links a {
-    display: inline-block;
-    margin-right: 15px;
-    margin-top: 10px;
-    padding: 6px 10px;
-    background: #f3f6fb;
-    border-radius: 6px;
-    font-size: 14px;
-    text-decoration: none;
-    color: #003366;
-}
-
-.links a:hover {
-    background: #e6eefc;
-}
-
-
-/* =========================
-   PUBLICATIONS
-========================= */
-
-.publications li {
-    margin-bottom: 24px;
-}
-
-.publication-badge {
-    display: inline-block;
-    background: #e8f0fe;
-    color: #1a4d8f;
-    padding: 3px 8px;
-    border-radius: 6px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.publications a {
-    color: blue;
-}
-
-.publications a:hover {
-    text-decoration: underline;
-}
-
-
-/* =========================
-   NEWS / RESEARCH HIGHLIGHTS
-========================= */
-
-.news {
-    background: #f7f7f7;
-    padding: 15px;
-    border-radius: 6px;
-    margin-top: 20px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer {
-    margin-top: 80px;
-    font-size: 14px;
-    color: #777;
-    text-align: center;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-}
-
-
-/* =========================
-   MOBILE RESPONSIVENESS
-========================= */
-
-@media (max-width: 700px) {
-
-    body {
-        padding: 20px;
+  <style>
+    /* THEME */
+    :root {
+      --ink: #102033;
+      --ink-strong: #06182e;
+      --navy: #071b33;
+      --paper: #f6f3ec;
+      --surface: #fffdf8;
+      --muted: #647181;
+      --line: #d8d8d2;
+      --line-strong: #b9bdbe;
+      --accent: #df433f;
+      --accent-dark: #b92f2b;
+      --ice: #d9eaf2;
+      --header: rgba(246, 243, 236, 0.91);
+      --shadow: 0 30px 70px rgba(7, 27, 51, 0.14);
+      --shell: min(1180px, calc(100vw - 64px));
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+    :root[data-theme="dark"] {
+      --ink: #dce5ec;
+      --ink-strong: #f7f8f8;
+      --navy: #050d18;
+      --paper: #0c1722;
+      --surface: #111e2b;
+      --muted: #a4b0ba;
+      --line: #2a3a49;
+      --line-strong: #465566;
+      --accent: #ff655e;
+      --accent-dark: #ff7a73;
+      --ice: #183549;
+      --header: rgba(12, 23, 34, 0.91);
+      --shadow: 0 30px 70px rgba(0, 0, 0, 0.34);
     }
 
-    header img {
-        margin-top: 10px;
+    /* BASE */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; color-scheme: light; }
+    html[data-theme="dark"] { color-scheme: dark; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 1rem; line-height: 1.65; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+    body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.32; background-image: linear-gradient(rgba(16,32,51,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(16,32,51,.035) 1px, transparent 1px); background-size: 36px 36px; mask-image: linear-gradient(to bottom, black, transparent 72%); }
+    ::selection { background: var(--accent); color: #fff; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; }
+    img { display: block; }
+    .shell { width: var(--shell); margin-inline: auto; }
+    .skip-link { position: fixed; left: 16px; top: 12px; z-index: 100; padding: 10px 14px; transform: translateY(-180%); background: var(--ink-strong); color: var(--surface); text-decoration: none; }
+    .skip-link:focus { transform: translateY(0); }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+
+    /* HEADER */
+    .site-header { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid transparent; background: var(--header); backdrop-filter: blur(18px); transition: border-color 180ms ease, box-shadow 180ms ease; }
+    .site-header.is-scrolled { border-bottom-color: var(--line); box-shadow: 0 10px 35px rgba(7,27,51,.05); }
+    .header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+    .brand { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; }
+    .brand-mark { display: grid; place-items: center; width: 46px; height: 34px; color: #fff; background: var(--navy); font-size: .72rem; font-weight: 800; letter-spacing: .09em; }
+    .brand-field { color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .primary-nav { display: flex; align-items: center; gap: clamp(20px, 2.4vw, 36px); }
+    .primary-nav a { position: relative; padding-block: 26px; color: var(--muted); font-size: .82rem; font-weight: 650; letter-spacing: .03em; text-decoration: none; }
+    .primary-nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 20px; height: 2px; background: var(--accent); transition: right 180ms ease; }
+    .primary-nav a:hover, .primary-nav a[aria-current="true"] { color: var(--ink-strong); }
+    .primary-nav a:hover::after, .primary-nav a[aria-current="true"]::after { right: 0; }
+    .header-actions { display: flex; align-items: center; gap: 8px; }
+    .theme-toggle, .menu-toggle { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+    .theme-toggle:hover, .menu-toggle:hover { border-color: var(--ink); }
+    .theme-icon { font-size: 1.15rem; line-height: 1; }
+    .menu-toggle { display: none; gap: 5px; }
+    .menu-toggle span { width: 18px; height: 1px; background: currentColor; transition: transform 180ms ease; }
+
+    /* HERO */
+    .hero { padding: clamp(72px, 9vw, 130px) 0 34px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.28fr) minmax(330px, .72fr); align-items: center; gap: clamp(54px, 8vw, 120px); }
+    .eyebrow, .kicker, .micro-label { margin: 0 0 22px; color: var(--accent-dark); font-size: .72rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+    .eyebrow::before, .kicker::before { content: ""; display: inline-block; width: 30px; height: 2px; margin-right: 12px; vertical-align: .22em; background: currentColor; }
+    .hero h1 { max-width: 760px; margin: 0; color: var(--ink-strong); font-family: var(--serif); font-size: clamp(4rem, 8.3vw, 7.5rem); font-weight: 400; letter-spacing: -.075em; line-height: .82; }
+    .hero h1 em { color: var(--accent); font-weight: 400; }
+    .hero-statement { max-width: 700px; margin: 42px 0 28px; color: var(--ink); font-family: var(--serif); font-size: clamp(1.25rem, 2vw, 1.65rem); line-height: 1.48; }
+    .identity-line { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: var(--muted); font-size: .84rem; font-weight: 650; letter-spacing: .035em; }
+    .identity-divider { width: 3px; height: 3px; border-radius: 50%; background: var(--accent); }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 38px; }
+    .button { display: inline-flex; align-items: center; justify-content: space-between; min-width: 174px; min-height: 52px; padding: 13px 18px; border: 1px solid var(--navy); font-size: .82rem; font-weight: 750; letter-spacing: .02em; text-decoration: none; transition: transform 180ms ease, background 180ms ease, color 180ms ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--navy); color: #fff; }
+    .button-primary:hover { background: var(--accent); border-color: var(--accent); }
+    .button-quiet { color: var(--ink-strong); }
+    .button-quiet:hover { background: var(--surface); }
+    .text-link { display: inline-flex; align-items: center; gap: 8px; padding: 12px 4px; border-bottom: 1px solid currentColor; color: var(--ink-strong); font-size: .84rem; font-weight: 750; text-decoration: none; }
+    .text-link:hover { color: var(--accent-dark); }
+    .hero-visual { position: relative; min-height: 590px; }
+    .hero-visual::before { content: ""; position: absolute; top: 4%; right: -54%; width: 120%; aspect-ratio: 1; border: 1px solid var(--line); border-radius: 50%; }
+    .portrait-frame { position: absolute; top: 18px; right: 0; width: min(100%, 410px); aspect-ratio: 4 / 3; overflow: hidden; border: 10px solid var(--surface); background: var(--ice); box-shadow: var(--shadow); }
+    .portrait-frame::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(7,27,51,.1); pointer-events: none; }
+    .portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .focus-card { position: absolute; z-index: 2; left: -38px; bottom: 36px; width: min(330px, 88%); padding: 25px 26px 22px; border-top: 4px solid var(--accent); background: var(--navy); color: #fff; box-shadow: var(--shadow); }
+    .focus-card .micro-label { margin-bottom: 12px; color: #f3a39f; }
+    .focus-card p:not(.micro-label) { margin: 0; font-family: var(--serif); font-size: 1.05rem; line-height: 1.46; }
+    .focus-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+    .focus-tags span { padding: 4px 8px; border: 1px solid rgba(255,255,255,.28); color: #d7e1ea; font-size: .67rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+    .hero-index { position: absolute; right: -12px; bottom: -15px; color: var(--line); font-family: var(--serif); font-size: 7rem; line-height: 1; }
+    .hero-foot { display: flex; align-items: center; gap: 18px; margin-top: 40px; color: var(--muted); font-size: .69rem; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
+    .signal-line { flex: 1; height: 1px; background: var(--line); }
+
+    /* SECTIONS AND ABOUT */
+    .section { padding: clamp(86px, 10vw, 150px) 0; border-top: 1px solid var(--line); }
+    .section-grid { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: clamp(44px, 7vw, 94px); }
+    .section-label { padding-top: 5px; }
+    .section-label span { color: var(--accent); font-family: var(--serif); font-size: 2.2rem; }
+    .section-label p { margin: 4px 0 0; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; writing-mode: vertical-rl; transform: rotate(180deg); }
+    .section-content { min-width: 0; }
+    .lead-copy { max-width: 1020px; margin: -10px 0 58px; color: var(--ink-strong); font-family: var(--serif); font-size: clamp(2.3rem, 5vw, 4.8rem); letter-spacing: -.045em; line-height: 1.05; }
+    .lead-copy em { color: var(--accent); font-weight: 400; }
+    .about-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px; max-width: 900px; }
+    .about-columns p { margin: 0; color: var(--muted); font-size: 1.03rem; }
+    .profile-links { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 900px; margin-top: 58px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .profile-links a { display: flex; justify-content: space-between; padding: 18px 20px; border-right: 1px solid var(--line); font-size: .8rem; font-weight: 750; text-decoration: none; }
+    .profile-links a:last-child { border-right: 0; }
+    .profile-links a:hover { background: var(--surface); color: var(--accent-dark); }
+    .section-heading-row { display: grid; grid-template-columns: 1.25fr .75fr; align-items: end; gap: 50px; margin-bottom: 62px; }
+    .section h2 { margin: 0; color: var(--ink-strong); font-family: var(--serif); font-size: clamp(2.6rem, 5.2vw, 5rem); font-weight: 400; letter-spacing: -.055em; line-height: 1; }
+    .section-intro { margin: 0; color: var(--muted); }
+
+    /* RESEARCH */
+    .research { background: var(--surface); }
+    .research-list { border-top: 1px solid var(--line-strong); }
+    .research-item { display: grid; grid-template-columns: 62px minmax(0, 1.35fr) minmax(210px, .65fr); gap: 28px; padding: 38px 0; border-bottom: 1px solid var(--line); transition: padding 180ms ease, background 180ms ease; }
+    .research-item:hover { padding-inline: 18px; background: var(--paper); }
+    .research-number { color: var(--accent); font-family: var(--serif); font-size: 1.6rem; }
+    .research-item h3 { margin: 0 0 10px; color: var(--ink-strong); font-family: var(--serif); font-size: clamp(1.55rem, 2.5vw, 2.2rem); font-weight: 400; letter-spacing: -.025em; line-height: 1.15; }
+    .research-item p { max-width: 620px; margin: 0; color: var(--muted); }
+    .research-item ul { margin: 4px 0 0; padding: 0; list-style: none; }
+    .research-item li { position: relative; margin-bottom: 7px; padding-left: 15px; color: var(--muted); font-size: .8rem; }
+    .research-item li::before { content: ""; position: absolute; left: 0; top: .7em; width: 5px; height: 1px; background: var(--accent); }
+
+    /* PUBLICATIONS */
+    .publication-heading { align-items: center; }
+    .scholar-link { justify-self: end; }
+    .publication-list { border-top: 1px solid var(--line-strong); }
+    .publication-card { position: relative; display: grid; grid-template-columns: 80px minmax(0, 1fr) 86px; gap: 30px; padding: 34px 20px 34px 0; border-bottom: 1px solid var(--line); }
+    .featured-publication::before { content: ""; position: absolute; top: 0; bottom: 0; left: -18px; width: 3px; background: var(--accent); }
+    .publication-year { padding-top: 34px; color: var(--muted); font-family: var(--serif); font-size: 1rem; }
+    .publication-flags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+    .publication-flags span { padding: 4px 8px; background: var(--ice); color: var(--ink); font-size: .63rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .publication-copy h3 { max-width: 860px; margin: 0 0 14px; font-family: var(--serif); font-size: clamp(1.24rem, 2.2vw, 1.72rem); font-weight: 400; line-height: 1.3; }
+    .publication-copy h3 a { text-decoration: none; background-image: linear-gradient(var(--accent), var(--accent)); background-position: 0 100%; background-repeat: no-repeat; background-size: 0 1px; transition: background-size 220ms ease; }
+    .publication-copy h3 a:hover { background-size: 100% 1px; }
+    .authors, .venue { margin: 0; color: var(--muted); font-size: .82rem; }
+    .authors { margin-bottom: 3px; }
+    .authors strong { color: var(--ink); }
+    .paper-link { align-self: start; justify-self: end; padding: 5px 0; border-bottom: 1px solid currentColor; color: var(--ink-strong); font-size: .75rem; font-weight: 800; text-decoration: none; }
+    .paper-link:hover { color: var(--accent-dark); }
+
+    /* EDUCATION */
+    .education { background: var(--navy); color: #dce4eb; }
+    .education .section-label p, .education .education-intro { color: #98a7b5; }
+    .education .section-label span { color: #ff736c; }
+    .education h2 { color: #fff; }
+    .kicker-light { color: #ff8c86; }
+    .education-intro { max-width: 620px; margin: 28px 0 56px; font-family: var(--serif); font-size: 1.2rem; }
+    .education-timeline { margin: 0; padding: 0; border-top: 1px solid rgba(255,255,255,.22); list-style: none; }
+    .education-timeline li { display: grid; grid-template-columns: 170px minmax(0, 1fr) auto; align-items: center; gap: 30px; padding: 30px 0; border-bottom: 1px solid rgba(255,255,255,.16); }
+    .education-timeline time { color: #9daab6; font-size: .76rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+    .education-timeline h3 { margin: 0 0 3px; color: #fff; font-family: var(--serif); font-size: 1.45rem; font-weight: 400; }
+    .education-timeline p { margin: 0; color: #aebac4; font-size: .9rem; }
+    .timeline-status { padding: 5px 9px; border: 1px solid rgba(255,255,255,.25); color: #d9e1e8; font-size: .65rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+
+    /* CONTACT */
+    .contact-content h2 { max-width: 930px; }
+    .contact-intro { max-width: 620px; margin: 28px 0 48px; color: var(--muted); }
+    .email-cta { display: grid; grid-template-columns: 150px minmax(0, 1fr) auto; align-items: center; gap: 28px; padding: 24px 0; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); text-decoration: none; }
+    .email-cta > span:first-child { color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .email-cta strong { font-family: var(--serif); font-size: clamp(1.35rem, 3vw, 2.3rem); font-weight: 400; overflow-wrap: anywhere; }
+    .email-arrow { display: grid; place-items: center; width: 48px; height: 48px; background: var(--accent); color: #fff; font-size: 1.25rem; transition: transform 180ms ease; }
+    .email-cta:hover .email-arrow { transform: translate(3px, -3px); }
+    .institutional-emails { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px; margin-top: 32px; }
+    .institutional-emails div { display: grid; gap: 4px; }
+    .institutional-emails span { color: var(--muted); font-size: .66rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .institutional-emails a { width: fit-content; color: var(--ink); font-size: .88rem; text-underline-offset: 4px; }
+
+    /* FOOTER */
+    .site-footer { padding: 56px 0; border-top: 1px solid var(--line); background: var(--surface); }
+    .footer-grid { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 26px; }
+    .footer-name { color: var(--ink-strong); font-family: var(--serif); font-size: 1.4rem; text-decoration: none; }
+    .site-footer p { margin: 6px 0 0; color: var(--muted); font-size: .72rem; }
+    .footer-links { display: flex; gap: 22px; }
+    .footer-links a { font-size: .75rem; font-weight: 750; text-decoration: none; }
+    .footer-links a:hover { color: var(--accent-dark); }
+    .copyright { grid-column: 1 / -1; padding-top: 24px; border-top: 1px solid var(--line); }
+
+    /* SUBTLE ENTRANCE ANIMATION */
+    .reveal-ready [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 600ms ease, transform 600ms ease; }
+    .reveal-ready [data-reveal].is-visible { opacity: 1; transform: none; }
+
+    /* TABLET */
+    @media (max-width: 980px) {
+      :root { --shell: min(100% - 40px, 820px); }
+      .brand-field { display: none; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { width: min(520px, 100%); min-height: 550px; margin-left: auto; }
+      .section-grid { grid-template-columns: 70px minmax(0, 1fr); gap: 34px; }
+      .section-heading-row { grid-template-columns: 1fr; gap: 25px; }
+      .section-intro { max-width: 630px; }
+      .research-item { grid-template-columns: 48px minmax(0, 1fr); }
+      .research-item ul { grid-column: 2; display: flex; flex-wrap: wrap; gap: 5px 16px; }
+      .publication-card { grid-template-columns: 60px minmax(0, 1fr); }
+      .paper-link { grid-column: 2; justify-self: start; }
     }
 
-    nav a {
-        display: inline-block;
-        margin-bottom: 8px;
+    /* MOBILE */
+    @media (max-width: 760px) {
+      :root { --shell: calc(100% - 32px); }
+      html { scroll-padding-top: 74px; }
+      .header-inner { min-height: 66px; }
+      .menu-toggle { display: grid; }
+      .primary-nav { position: absolute; top: 66px; left: 0; right: 0; display: grid; gap: 0; max-height: 0; overflow: hidden; border-bottom: 0 solid var(--line); background: var(--paper); transition: max-height 240ms ease, border-width 240ms ease; }
+      .primary-nav.is-open { max-height: 380px; border-bottom-width: 1px; }
+      .primary-nav a { padding: 15px 24px; border-top: 1px solid var(--line); }
+      .primary-nav a::after { display: none; }
+      .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3px) rotate(45deg); }
+      .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3px) rotate(-45deg); }
+      .hero { padding-top: 68px; }
+      .hero h1 { font-size: clamp(3.5rem, 17vw, 5.7rem); }
+      .hero-statement { margin-top: 30px; }
+      .hero-actions { align-items: stretch; }
+      .button { flex: 1 1 180px; }
+      .hero-visual { min-height: 480px; }
+      .portrait-frame { width: 92%; }
+      .focus-card { left: 0; bottom: 20px; }
+      .hero-foot { align-items: flex-start; }
+      .hero-foot .signal-line { display: none; }
+      .section-grid { grid-template-columns: 1fr; }
+      .section-label { display: flex; align-items: baseline; gap: 12px; }
+      .section-label span { font-size: 1.45rem; }
+      .section-label p { writing-mode: initial; transform: none; }
+      .lead-copy { margin-top: 0; }
+      .about-columns, .institutional-emails { grid-template-columns: 1fr; gap: 24px; }
+      .profile-links { grid-template-columns: 1fr; }
+      .profile-links a { border-right: 0; border-bottom: 1px solid var(--line); }
+      .profile-links a:last-child { border-bottom: 0; }
+      .publication-heading .scholar-link { justify-self: start; }
+      .education-timeline li { grid-template-columns: 1fr; gap: 12px; }
+      .timeline-status { width: fit-content; }
+      .email-cta { grid-template-columns: 1fr auto; gap: 12px; }
+      .email-cta > span:first-child { grid-column: 1 / -1; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-links { flex-wrap: wrap; }
     }
 
-}
+    @media (max-width: 520px) {
+      .hero h1 { letter-spacing: -.065em; }
+      .identity-line { display: grid; gap: 5px; }
+      .identity-divider { display: none; }
+      .hero-visual { min-height: 415px; }
+      .focus-card { width: 94%; padding: 20px; }
+      .hero-index { display: none; }
+      .research-item { grid-template-columns: 1fr; }
+      .research-item ul { grid-column: 1; }
+      .publication-card { grid-template-columns: 1fr; gap: 14px; padding-right: 0; }
+      .publication-year, .paper-link { padding-top: 0; grid-column: 1; }
+      .email-cta { grid-template-columns: 1fr; }
+      .email-arrow { margin-top: 8px; }
+    }
 
-</style>
+    /* REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+      .reveal-ready [data-reveal] { opacity: 1; transform: none; }
+    }
 
+    /* PRINT */
+    @media print {
+      .site-header, .theme-toggle, .menu-toggle, .hero-actions, .profile-links, .footer-links { display: none !important; }
+      body { background: #fff; color: #111; }
+      .section, .hero { padding: 36px 0; }
+      .education { background: #fff; color: #111; }
+      .education h2, .education-timeline h3 { color: #111; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rakesh Kumar Rai",
+    "jobTitle": "Senior Researcher — Computer Science",
+    "url": "https://rkmnnit.github.io/",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Motilal Nehru National Institute of Technology Allahabad"
+    },
+    "sameAs": [
+      "https://scholar.google.com/citations?user=Lh0NvWgAAAAJ&hl=en",
+      "https://github.com/RKMNNIT",
+      "https://www.linkedin.com/in/rakesh-rai-4241b9194/"
+    ],
+    "knowsAbout": [
+      "Computational neuroscience",
+      "EEG signal processing",
+      "Brain-computer interfaces",
+      "Artificial intelligence in healthcare"
+    ]
+  }
+  </script>
 </head>
 
-
 <body>
-
-
-<!-- =========================
-     HEADER
-========================= -->
-
-<header>
-
-<div class="header-text">
-
-<h1>Rakesh Kumar Rai</h1>
-
-<p class="highlight">
-Senior Researcher – Computer Science<br>
-Motilal Nehru National Institute of Technology (MNNIT), Allahabad
-</p>
-
-<p>
-Research in Computational Neuroscience, EEG Signal Processing,
-Artificial Intelligence, and Neurophysiological Data Analysis
-</p>
-
-
-<!-- NAVIGATION -->
-
-<nav>
-
-<a href="#about">About</a>
-
-<a href="#research">Research</a>
-
-<a href="#publications">Publications</a>
-
-<a href="#education">Education</a>
-
-<a href="#contact">Contact</a>
-
-</nav>
-
-
-<!-- SOCIAL / ACADEMIC LINKS -->
-
-<div class="links">
-
-<a
-href="https://scholar.google.com/citations?user=Lh0NvWgAAAAJ&hl=en"
-target="_blank"
-rel="noopener noreferrer">
-Google Scholar
-</a>
-
-<a
-href="https://github.com/RKMNNIT"
-target="_blank"
-rel="noopener noreferrer">
-GitHub
-</a>
-
-<a
-href="https://www.linkedin.com/in/rakesh-rai-4241b9194/"
-target="_blank"
-rel="noopener noreferrer">
-LinkedIn
-</a>
-
-</div>
-
-</div>
-
-
-<!-- PROFILE IMAGE -->
-
-<img
-src="profile.jpeg"
-alt="Rakesh Kumar Rai">
-
-</header>
-
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<h2 id="about">About Me</h2>
-
-<p>
-Rakesh Kumar Rai is a researcher in Computer Science and
-Computational Neuroscience, currently pursuing his PhD at
-Motilal Nehru National Institute of Technology (MNNIT), Allahabad.
-</p>
-
-<p>
-His research focuses on EEG signal analysis and computational
-neuroscience, particularly the development of deep learning frameworks
-for cognitive state detection and neurological disorder analysis.
-</p>
-
-
-
-<!-- =========================
-     RESEARCH HIGHLIGHTS
-========================= -->
-
-<div class="news">
-
-<b>Research Highlights</b>
-
-<ul>
-
-<li>
-Research on EEG-based cognitive and neurological state analysis
-</li>
-
-<li>
-Deep learning and interpretable AI for healthcare applications
-</li>
-
-<li>
-Research on wearable sensing, sleep-stage analysis, and edge intelligence
-</li>
-
-</ul>
-
-</div>
-
-
-
-<!-- =========================
-     RESEARCH INTERESTS
-========================= -->
-
-<h2 id="research">Research Interests</h2>
-
-<ul>
-
-<li>Computational Neuroscience</li>
-
-<li>Multimodal Neurophysiological Signal Processing</li>
-
-<li>Brain–Computer Interface (BCI)</li>
-
-<li>Application of AI/ML in Healthcare</li>
-
-<li>Human-computer interaction (HCI)</li>
-
-<li>EEG and Multimodal AI for Human Movement and Neuromotor Rehabilitation</li>
-
-</ul>
-
-
-
-<!-- =========================
-    SELECTED RESEARCH PUBLICATIONS
-========================= -->
-
-<h2 id="publications">Selected Research Publications</h2>
-
-
-<!-- =========================
-     JOURNAL PUBLICATIONS
-========================= -->
-
-<h3>Journal Publications</h3>
-
-<ul class="publications">
-
-
-<!-- JOURNAL PUBLICATION 1 -->
-
-<li>
-
-<b>Rakesh Kumar Rai</b>, <i>et al.</i>
-
-"<a
-href="https://doi.org/10.1109/TII.2026.3722429"
-target="_blank"
-rel="noopener noreferrer">
-A3S-Net: An Adaptive State-Space Framework for Resource-Efficient
-EEG-Based Cognitive State Monitoring in Industrial Human–Machine Interaction
-</a>."
-
-<i>IEEE Transactions on Industrial Informatics</i>,
-IEEE, 2026.
-
-<span class="publication-badge">
-EARLY ACCESS | SCI Q1 | IF: 9.8
-</span>
-
-</li>
-
-
-<!-- JOURNAL PUBLICATION 2 -->
-
-<li>
-
-<b>Rakesh Kumar Rai</b>, Sumana Achar, <i>et al.</i>
-
-"<a
-href="https://doi.org/10.1109/TCE.2026.3710385"
-target="_blank"
-rel="noopener noreferrer">
-FedTrust-UNLEARN: Trust-Aware Federated Learning with Auditable
-Unlearning for Privacy-Preserving Consumer IoMT EEG Intelligence
-</a>."
-
-<i>IEEE Transactions on Consumer Electronics</i>,
-IEEE, 2026.
-
-<span class="publication-badge">
-SCI Q1 | IF: 9.9
-</span>
-
-</li>
-
-
-<!-- JOURNAL PUBLICATION 3 -->
-
-<li>
-
-<b>Rakesh Kumar Rai</b>, Dushyant Kumar Singh, <i>et al.</i>
-
-"<a
-href="https://ieeexplore.ieee.org/document/11560987/"
-target="_blank"
-rel="noopener noreferrer">
-SleepXNet: DeepSeek-Guided Hybrid Transformer Model for
-Clinically Interpretable EEG-Based Sleep Stage Classification
-</a>."
-
-<i>IEEE Transactions on Emerging Topics in Computational Intelligence</i>,
-IEEE, 2026.
-
-<span class="publication-badge">
-SCI Q1 | IF: 6
-</span>
-
-</li>
-
-
-<!-- JOURNAL PUBLICATION 4 -->
-
-<li>
-
-<b>Rakesh Kumar Rai</b>, Dushyant Kumar Singh, <i>et al.</i>
-
-"<a
-href="https://ieeexplore.ieee.org/document/11456572/"
-target="_blank"
-rel="noopener noreferrer">
-PHyena–DurCRF: A Quantum-Inspired, Edge-Efficient Analytics
-Framework for Human-Centric Wearable Sensing
-</a>."
-
-<i>IEEE Transactions on Consumer Electronics</i>,
-IEEE, Vol. 72, No. 2, pp. 3949–3956, 2026.
-
-<span class="publication-badge">
-SCI Q1 | IF: 9.9
-</span>
-
-</li>
-
-
-<!-- JOURNAL PUBLICATION 5 -->
-
-<li>
-
-<b>Rakesh Kumar Rai</b> and Dushyant Kumar Singh.
-
-"<a
-href="https://www.sciencedirect.com/science/article/pii/S0045790625004215"
-target="_blank"
-rel="noopener noreferrer">
-Stress Detection Through Wearable EEG Technology:
-A Signal-Based Approach
-</a>."
-
-<i>Computers and Electrical Engineering</i>,
-Elsevier, Vol. 126, Article 110478, 2025.
-
-<span class="publication-badge">
-SCI Q1 | IF: 5.5
-</span>
-
-</li>
-
-
-</ul>
-
-
-
-<!-- =========================
-     CONFERENCE PUBLICATIONS
-========================= -->
-
-<h3>Conference Publications</h3>
-
-<ul class="publications">
-
-
-<!-- CONFERENCE PUBLICATION 1 -->
-
-<li>
-
-<b>Rakesh Kumar Rai</b>, Sricheta Parui, Dushyant Kumar Singh, Rupal Hukampal Singh.
-
-"<a
-href="https://link.springer.com/chapter/10.1007/978-3-032-31673-8_12"
-target="_blank"
-rel="noopener noreferrer">
-NestedSleepNet: Physiology-Guided Multi-scale Learning with Hierarchical
-Temporal Memory for EEG Sleep Stage Classification
-</a>."
-
-<i>International Conference on Pattern Recognition (ICPR)</i>,
-Springer Nature Switzerland, 2026, pp. 172–186.
-
-<span class="publication-badge">
-CORE B | ICPR 2026
-</span>
-
-</li>
-
-
-</ul>
-
-<!-- =========================
-     EDUCATION
-========================= -->
-
-<h2 id="education">Education</h2>
-
-<ul>
-
-<li>
-
-<b>PhD – Computer Science</b><br>
-
-Motilal Nehru National Institute of Technology (MNNIT), Allahabad<br>
-
-2022 – Present
-
-</li>
-
-<br>
-
-<li>
-
-<b>M.Tech – Computer Science</b><br>
-
-Maharshi Dayanand University<br>
-
-2019 – 2021
-
-</li>
-
-<br>
-
-<li>
-
-<b>B.Tech – Computer Science</b><br>
-
-National Institute of Technology Nagaland<br>
-
-2012 – 2016
-
-</li>
-
-</ul>
-
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<h2 id="contact">Contact</h2>
-
-<p>
-
-Personal Email:
-
-<a href="mailto:rakeshnitn25@gmail.com">
-rakeshnitn25@gmail.com
-</a>
-
-</p>
-
-<p>
-
-Official Email:
-
-<a href="mailto:rakesh.raifcs@kiit.ac.in">
-rakesh.2021rcs54@mnnit.ac.in
-</a>
-
-</p>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<div class="footer">
-
-© 2026 Rakesh Kumar Rai<br>
-
-Academic Website
-
-</div>
-
-
-</body>
-
-</html>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="#home" aria-label="Rakesh Kumar Rai — home">
+        <span class="brand-mark" aria-hidden="true">RKR</span>
+        <span class="brand-field">NeuroAI · EEG</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation" data-nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button"
+                aria-label="Switch color theme" data-theme-toggle>
+          <span class="theme-icon" aria-hidden="true">◐</span>
+        </button>
+
+        <button class="menu-toggle" type="button"
+                aria-label="Open navigation"
+                aria-expanded="false" data-menu-toggle>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Computer science × neuroscience</p>
+
+          <h1 id="hero-title">Rakesh<br><em>Kumar Rai</em></h1>
+
+          <p class="hero-statement">
+            I develop interpretable, resource-aware AI methods that turn
+            complex EEG signals into useful models of human cognition,
+            sleep, and neurological state.
+          </p>
+
+          <div class="identity-line">
+            <span>Senior Researcher</span>
+            <span class="identity-divider" aria-hidden="true"></span>
+            <span>MNNIT Allahabad</span>
+            <span class="identity-divider" aria-hidden="true"></span>
+            <span>PhD researcher</span>
+          </div>
+
+          <div class="hero-actions" aria-label="Profile links">
+            <a class="button button-primary"
+               href="https://scholar.google.com/citations?user=Lh0NvWgAAAAJ&amp;hl=en"
+               target="_blank" rel="noopener noreferrer">
+              Google Scholar <span aria-hidden="true">↗</span>
+            </a>
+
+            <a class="button button-quiet" href="#publications">
+              Selected work <span aria-hidden="true">↓</span>
+            </a>
+
+            <a class="text-link" href="mailto:rakeshnitn25@gmail.com">
+              Email me
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-visual" aria-label="Profile and research focus">
+          <div class="portrait-frame">
+            <!-- Keep profile.jpeg in the same folder as index.html -->
+            <img src="profile.jpeg" width="400" height="300"
+                 alt="Rakesh Kumar Rai">
+          </div>
+
+          <div class="focus-card">
+            <p class="micro-label">Current research</p>
+            <p>
+              EEG intelligence for cognitive monitoring, sleep analysis,
+              and human-centered healthcare.
+            </p>
+            <div class="focus-tags" aria-label="Research topics">
+              <span>NeuroAI</span>
+              <span>BCI</span>
+              <span>Wearables</span>
+            </div>
+          </div>
+
+          <span class="hero-index" aria-hidden="true">01</span>
+        </aside>
+      </div>
+
+      <div class="shell hero-foot">
+        <span>Allahabad, India</span>
+        <span class="signal-line" aria-hidden="true"></span>
+        <span>Updated September 2026</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="shell section-grid">
+        <div class="section-label">
+          <span aria-hidden="true">02</span>
+          <p>About</p>
+        </div>
+
+        <div class="section-content about-content">
+          <p class="lead-copy" id="about-title">
+            My work sits at the intersection of <em>neural signals</em>,
+            <em>machine intelligence</em>, and <em>human health</em>.
+          </p>
+
+          <div class="about-columns">
+            <p>
+              I am a researcher in Computer Science and Computational
+              Neuroscience, currently pursuing my PhD at Motilal Nehru
+              National Institute of Technology (MNNIT), Allahabad.
+            </p>
+            <p>
+              I focus on EEG signal analysis and deep-learning frameworks
+              for cognitive-state detection, neurological-disorder analysis,
+              sleep staging, and low-power wearable sensing.
+            </p>
+          </div>
+
+          <div class="profile-links" aria-label="Professional profiles">
+            <a href="https://github.com/RKMNNIT"
+               target="_blank" rel="noopener noreferrer">
+              <span>GitHub</span><span aria-hidden="true">↗</span>
