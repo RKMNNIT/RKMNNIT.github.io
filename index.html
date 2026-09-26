@@ -483,7 +483,11 @@
 
     .hero-visual {
       position: relative;
-      min-height: 590px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 18px;
+      min-height: 0;
     }
 
     .hero-visual::before {
@@ -495,13 +499,17 @@
       aspect-ratio: 1;
       border: 1px solid var(--line);
       border-radius: 50%;
+      z-index: 0;
+      pointer-events: none;
     }
 
     .portrait-frame {
-      position: absolute;
-      top: 18px;
-      right: 0;
+      position: relative;
+      top: auto;
+      right: auto;
+      z-index: 1;
       width: min(100%, 410px);
+      margin-left: auto;
       aspect-ratio: 4 / 3;
       overflow: hidden;
       border: 10px solid var(--surface);
@@ -525,11 +533,14 @@
     }
 
     .focus-card {
-      position: absolute;
+      position: relative;
       z-index: 2;
-      left: -38px;
-      bottom: 36px;
-      width: min(330px, 88%);
+      left: auto;
+      right: auto;
+      top: auto;
+      bottom: auto;
+      width: min(100%, 410px);
+      margin-left: auto;
       padding: 25px 26px 22px;
       border-top: 4px solid var(--accent);
       background: var(--navy);
@@ -1159,8 +1170,16 @@
 
       .hero-visual {
         width: min(520px, 100%);
-        min-height: 550px;
+        min-height: 0;
         margin-left: auto;
+        margin-right: auto;
+        align-items: stretch;
+      }
+
+      .portrait-frame,
+      .focus-card {
+        width: 100%;
+        margin-left: 0;
       }
 
       .section-grid {
@@ -1280,16 +1299,20 @@
       }
 
       .hero-visual {
-        min-height: 480px;
+        width: 100%;
+        min-height: 0;
+        gap: 16px;
+        margin: 0;
       }
 
       .portrait-frame {
-        width: 92%;
+        width: 100%;
       }
 
       .focus-card {
-        left: 0;
-        bottom: 20px;
+        width: 100%;
+        left: auto;
+        bottom: auto;
       }
 
       .hero-foot {
@@ -1388,11 +1411,12 @@
       }
 
       .hero-visual {
-        min-height: 415px;
+        min-height: 0;
+        gap: 14px;
       }
 
       .focus-card {
-        width: 94%;
+        width: 100%;
         padding: 20px;
       }
 
