@@ -1733,3 +1733,27 @@
   color:var(--muted);
   font-size:.86rem;
 }
+
+/* Compact dated updates on homepage */
+.home-updates .section-heading-row{
+  align-items:center;
+  margin-bottom:34px;
+}
+.home-updates .section-heading-row .text-link{
+  justify-self:end;
+}
+.home-updates .news-item{
+  grid-template-columns:130px minmax(0,1fr);
+}
+.home-updates .news-year{
+  white-space:nowrap;
+  font-size:.9rem;
+}
+@media(max-width:760px){
+  .home-updates .section-heading-row .text-link{
+    justify-self:start;
+  }
+  .home-updates .news-item{
+    grid-template-columns:1fr;
+  }
+}
