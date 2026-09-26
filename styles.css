@@ -1706,3 +1706,30 @@
 .explore-card strong{margin-top:auto;padding-top:22px;color:var(--ink-strong);font-size:.75rem}
 .page-note{max-width:840px;color:var(--muted)}
 @media(max-width:980px){.explore-grid{grid-template-columns:1fr}.explore-card{min-height:0}}
+
+/* Publication grouping */
+.publication-group + .publication-group{
+  margin-top:clamp(54px,7vw,84px);
+}
+.publication-group-title{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin:0 0 24px;
+  color:var(--ink-strong);
+  font-family:var(--serif);
+  font-size:clamp(1.8rem,3.2vw,2.7rem);
+  font-weight:400;
+  letter-spacing:-0.03em;
+}
+.publication-group-title::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:var(--line);
+}
+.publication-group-note{
+  margin:-12px 0 28px;
+  color:var(--muted);
+  font-size:.86rem;
+}
