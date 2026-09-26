@@ -1,189 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#071b33">
+  <meta name="color-scheme" content="light dark">
   <title>Academic CV | Rakesh Kumar Rai</title>
-  <meta name="description" content="Academic CV of Rakesh Kumar Rai, doctoral researcher in Computer Science and Engineering working on EEG, computational neuroscience, and interpretable AI.">
+  <meta name="description" content="Academic profile of Rakesh Kumar Rai, doctoral researcher in Computer Science and Engineering at MNNIT Allahabad.">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Academic CV | Rakesh Kumar Rai">
+  <meta property="og:description" content="Academic profile of Rakesh Kumar Rai, doctoral researcher in Computer Science and Engineering at MNNIT Allahabad.">
+  <meta property="og:image" content="https://rkmnnit.github.io/profile.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Academic CV | Rakesh Kumar Rai">
+  <meta name="twitter:description" content="Academic profile of Rakesh Kumar Rai, doctoral researcher in Computer Science and Engineering at MNNIT Allahabad.">
+  <meta name="twitter:image" content="https://rkmnnit.github.io/profile.jpeg">
   <link rel="canonical" href="https://rkmnnit.github.io/cv.html">
-  <style>
-    :root {
-      --ink:#102033;
-      --ink-strong:#06182e;
-      --navy:#071b33;
-      --paper:#f6f3ec;
-      --surface:#fffdf8;
-      --muted:#647181;
-      --line:#d8d8d2;
-      --accent:#df433f;
-      --serif:Georgia,"Times New Roman",serif;
-      --sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6}
-    .shell{width:min(980px,calc(100% - 40px));margin:auto}
-    header{padding:28px 0;border-bottom:1px solid var(--line);background:var(--surface)}
-    nav{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
-    nav a{text-decoration:none;font-weight:750}
-    .back{color:var(--accent)}
-    main{padding:72px 0 96px}
-    h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--ink-strong)}
-    h1{font-size:clamp(3rem,8vw,6rem);line-height:.95;letter-spacing:-.05em;margin:0 0 20px}
-    .subtitle{font-size:1.15rem;color:var(--muted);max-width:760px}
-    .contact{display:flex;flex-wrap:wrap;gap:10px 22px;margin:28px 0 54px;font-size:.92rem}
-    .contact a{color:var(--ink-strong)}
-    section{padding:36px 0;border-top:1px solid var(--line)}
-    h2{font-size:2rem;margin:0 0 20px}
-    h3{font-size:1.25rem;margin:0 0 6px}
-    p{margin:0}
-    ul{margin:12px 0 0;padding-left:20px}
-    .item{display:grid;grid-template-columns:170px minmax(0,1fr);gap:28px;padding:18px 0;border-bottom:1px solid var(--line)}
-    .item:last-child{border-bottom:0}
-    .meta{color:var(--muted);font-size:.86rem}
-    .pubs{margin:0;padding-left:22px}
-    .pubs li{margin-bottom:16px}
-    .skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-    .skill{padding:18px;border:1px solid var(--line);background:var(--surface)}
-    footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
-    @media(max-width:680px){.item{grid-template-columns:1fr;gap:6px}.skills{grid-template-columns:1fr}main{padding-top:48px}}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="shell">
-      <nav>
-        <a href="/" class="back">← Rakesh Kumar Rai</a>
-        <a href="/#publications">Publications</a>
-      </nav>
+  <link rel="stylesheet" href="styles.css">
+  
+</head><body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+  <div class="shell header-inner">
+    <a class="brand" href="index.html" aria-label="Rakesh Kumar Rai — home">
+      <span class="brand-mark" aria-hidden="true">RKR</span>
+      <span class="brand-field">NeuroAI · EEG</span>
+    </a>
+    <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation" data-nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html" aria-current="page">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch color theme" data-theme-toggle><span class="theme-icon" aria-hidden="true">◐</span></button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle><span></span><span></span></button>
     </div>
-  </header>
-
-  <main class="shell">
-    <p class="meta">ACADEMIC CV</p>
-    <h1>Rakesh Kumar Rai</h1>
-    <p class="subtitle">
-      Doctoral Researcher in Computer Science &amp; Engineering ·
-      AI, EEG &amp; Computational Neuroscience · MNNIT Allahabad
-    </p>
-
-    <div class="contact">
-      <a href="mailto:rakesh.2021rcs54@mnnit.ac.in">rakesh.2021rcs54@mnnit.ac.in</a>
-      <a href="mailto:rakeshnitn25@gmail.com">rakeshnitn25@gmail.com</a>
-      <a href="https://scholar.google.com/citations?user=Lh0NvWgAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+  </div>
+</header>
+  <main id="main"><section class="page-title"><div class="shell"><p class="eyebrow">Academic CV</p><h1>Rakesh Kumar Rai.</h1><p class="page-summary">Doctoral Researcher in Computer Science &amp; Engineering · AI, EEG &amp; Computational Neuroscience · MNNIT Allahabad.</p></div></section>
+<section class="section surface">
+  <div class="shell section-grid">
+    <div class="section-label"><span aria-hidden="true">01</span><p>Profile</p></div>
+    <div class="section-content">
+      <p class="lead-copy">Researching robust, interpretable, physiology-guided, and computationally efficient learning from neurophysiological signals.</p>
+      <div class="two-columns">
+        <p>My doctoral research focuses on EEG-based modelling of cognitive and brain states, multimodal neurophysiological signal processing, temporal representation learning, explainable AI, brain–computer interfaces, and wearable neurotechnology.</p>
+        <p>Broader interests include human movement modelling, locomotor adaptation, and AI-enabled neurorehabilitation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="shell section-grid">
+    <div class="section-label"><span aria-hidden="true">02</span><p>Education</p></div>
+    <div class="section-content">
+      <ol class="education-timeline">
+        <li><time datetime="2022">2022—Present</time><div><h3>Ph.D. · Computer Science &amp; Engineering</h3><p>Motilal Nehru National Institute of Technology Allahabad, Prayagraj, India</p></div><span class="timeline-status">In progress</span></li>
+        <li><time datetime="2019">2019—2021</time><div><h3>M.Tech. · Computer Science &amp; Engineering</h3><p>Maharshi Dayanand University, Rohtak, India</p></div></li>
+        <li><time datetime="2012">2012—2016</time><div><h3>B.Tech. · Computer Science &amp; Engineering</h3><p>National Institute of Technology Nagaland, India</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+<section class="section surface">
+  <div class="shell section-grid">
+    <div class="section-label"><span aria-hidden="true">03</span><p>Experience</p></div>
+    <div class="section-content">
+      <div class="research-list">
+        <article class="research-item"><span class="research-number">2022—</span><div><h3>PhD Researcher · Computer Science</h3><p>MNNIT Allahabad. Research on human cognition and brain-state analysis using EEG and multimodal neurophysiological signals; robust temporal representation learning; wearable sensing; and EEG-informed neurorehabilitation.</p></div><ul><li>EEG &amp; multimodal signals</li><li>Interpretable learning</li><li>Wearable NeuroAI</li></ul></article>
+        <article class="research-item"><span class="research-number">2016—19</span><div><h3>Data Analyst</h3><p>Indraprastha Gas Limited, New Delhi. Data analysis, statistical modelling, and data-driven reporting for operational decision support.</p></div><ul><li>Python</li><li>Statistical modelling</li><li>Data analysis</li></ul></article>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="shell section-grid">
+    <div class="section-label"><span aria-hidden="true">04</span><p>Highlights</p></div>
+    <div class="section-content">
+      <div class="news-list">
+        <article class="news-item"><span class="news-year">2026</span><p>Selected among the Top 25 participants for the ICPR 2026 Doctoral Consortium.</p></article>
+        <article class="news-item"><span class="news-year">Qualification</span><p>GATE qualified.</p></article>
+        <article class="news-item"><span class="news-year">Admission</span><p>Selected for PhD admission in Computer Science at IIT (ISM) Dhanbad.</p></article>
+      </div>
+      <div class="hero-actions">
+        <a class="button button-primary" href="publications.html">Publications →</a>
+        <a class="button button-quiet" href="contact.html">Contact →</a>
+      </div>
+    </div>
+  </div>
+</section></main>
+  <footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <a class="footer-name" href="index.html">Rakesh Kumar Rai</a>
+      <p>EEG · computational neuroscience · interpretable and efficient NeuroAI</p>
+    </div>
+    <div class="footer-links" aria-label="Footer links">
+      <a href="https://scholar.google.com/citations?user=Lh0NvWgAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Scholar ↗</a>
       <a href="https://github.com/RKMNNIT" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       <a href="https://www.linkedin.com/in/rakesh-rai-4241b9194/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a href="news.html">News</a>
     </div>
-
-    <section>
-      <h2>Research profile</h2>
-      <p>
-        PhD researcher in Computer Science and Engineering working at the intersection
-        of artificial intelligence, computational neuroscience, and neurophysiological
-        signal processing. Research focuses on EEG-based modelling of cognitive and
-        brain states, with emphasis on robust, interpretable, physiology-guided, and
-        computationally efficient learning for human-centred applications.
-      </p>
-    </section>
-
-    <section>
-      <h2>Research interests</h2>
-      <div class="skills">
-        <div class="skill">Computational neuroscience and brain-state analysis</div>
-        <div class="skill">EEG and multimodal neurophysiological signal processing</div>
-        <div class="skill">Deep learning and temporal representation learning</div>
-        <div class="skill">Physiology-guided and mechanistic modelling</div>
-        <div class="skill">Explainable and interpretable AI</div>
-        <div class="skill">Brain-computer interfaces and human-centred AI</div>
-        <div class="skill">Human movement, locomotor adaptation, and neurorehabilitation</div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <div class="item">
-        <div class="meta">2022—Present</div>
-        <div><h3>Ph.D. in Computer Science and Engineering</h3><p>Motilal Nehru National Institute of Technology Allahabad, Prayagraj, India</p></div>
-      </div>
-      <div class="item">
-        <div class="meta">2019—2021</div>
-        <div><h3>M.Tech. in Computer Science and Engineering</h3><p>Maharshi Dayanand University, Rohtak, India</p></div>
-      </div>
-      <div class="item">
-        <div class="meta">2012—2016</div>
-        <div><h3>B.Tech. in Computer Science and Engineering</h3><p>National Institute of Technology Nagaland, India</p></div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Research experience</h2>
-      <div class="item">
-        <div class="meta">2022—Present</div>
-        <div>
-          <h3>PhD Researcher — Computer Science</h3>
-          <p>Motilal Nehru National Institute of Technology Allahabad, India</p>
-          <ul>
-            <li>Human cognition and brain-state analysis using EEG and multimodal neurophysiological signals.</li>
-            <li>Cognitive-state recognition under diverse physiological conditions including stress, fatigue, sleep, and meditation.</li>
-            <li>Robust and interpretable temporal representation learning for non-stationary and subject-dependent EEG.</li>
-            <li>Physiology-guided and computationally efficient models for wearable and consumer-grade neurophysiological sensing.</li>
-            <li>EEG-informed modelling of locomotor adaptation and robot-assisted neurorehabilitation.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Selected publications</h2>
-      <ol class="pubs">
-        <li><strong>Rakesh Kumar Rai</strong>, et al. “A3S-Net: An Adaptive State-Space Framework for Resource-Efficient EEG-Based Cognitive State Monitoring in Industrial Human-Machine Interaction.” <em>IEEE Transactions on Industrial Informatics</em>, 2026.</li>
-        <li><strong>Rakesh Kumar Rai</strong>, Sumana Achar, et al. “FedTrust-UNLEARN: Trust-Aware Federated Learning with Auditable Unlearning for Privacy-Preserving Consumer IoMT EEG Intelligence.” <em>IEEE Transactions on Consumer Electronics</em>, 2026.</li>
-        <li><strong>Rakesh Kumar Rai</strong>, Dushyant Kumar Singh, et al. “SleepXNet: DeepSeek-Guided Hybrid Transformer Model for Clinically Interpretable EEG-Based Sleep Stage Classification.” <em>IEEE Transactions on Emerging Topics in Computational Intelligence</em>, 2026.</li>
-        <li><strong>Rakesh Kumar Rai</strong>, Dushyant Kumar Singh, et al. “PHyena-DurCRF: A Quantum-Inspired, Edge-Efficient Analytics Framework for Human-Centric Wearable Sensing.” <em>IEEE Transactions on Consumer Electronics</em>, 2026.</li>
-        <li><strong>Rakesh Kumar Rai</strong> and Dushyant Kumar Singh. “Stress Detection Through Wearable EEG Technology: A Signal-Based Approach.” <em>Computers &amp; Electrical Engineering</em>, 126, 110478, 2025.</li>
-        <li><strong>Rakesh Kumar Rai</strong>, Sricheta Parui, Dushyant Kumar Singh, and Rupal Hukampal Singh. “NestedSleepNet: Physiology-Guided Multi-scale Learning with Hierarchical Temporal Memory for EEG Sleep Stage Classification.” <em>ICPR</em>, 2026, pp. 172–186.</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>Academic achievements</h2>
-      <ul>
-        <li>Selected among the Top 25 for the ICPR 2026 Doctoral Consortium.</li>
-        <li>GATE qualified.</li>
-        <li>Selected for PhD admission in Computer Science at IIT (ISM) Dhanbad.</li>
-        <li>AIEEE 2012 — All India Rank 35,083.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Technical skills</h2>
-      <div class="skills">
-        <div class="skill"><strong>Programming</strong><br>Python, C, C++</div>
-        <div class="skill"><strong>Machine learning</strong><br>Deep learning, time-series modelling, representation learning, explainable AI</div>
-        <div class="skill"><strong>Signal processing</strong><br>EEG and multimodal neurophysiological signal analysis</div>
-        <div class="skill"><strong>Tools</strong><br>MATLAB, Anaconda, Weka</div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Professional experience</h2>
-      <div class="item">
-        <div class="meta">Jun 2016—Jun 2019</div>
-        <div>
-          <h3>Data Analyst</h3>
-          <p>Indraprastha Gas Limited (IGL), New Delhi, India</p>
-          <ul>
-            <li>Analysed large-scale gas-consumption datasets for customer and operational insights.</li>
-            <li>Performed exploratory data analysis and statistical modelling using Python.</li>
-            <li>Developed data-driven reports supporting strategic decision-making and resource optimisation.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="shell">© 2026 Rakesh Kumar Rai · Academic CV</div>
-  </footer>
-</body>
-</html>
+    <p class="copyright">© 2026 Rakesh Kumar Rai</p>
+  </div>
+</footer>
+  <script src="script.js"></script>
+  </body></html>
